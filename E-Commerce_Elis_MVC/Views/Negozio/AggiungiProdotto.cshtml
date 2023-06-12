@@ -1,0 +1,15 @@
+﻿@model Prodotto
+@{
+    ViewData["Title"] = "AggiungiProdotto";
+}
+
+<h1>Aggiungi un prodotto al carrello</h1>
+<hr />
+
+<p>Nome Prodotto: @Model.NomeProdotto</p>
+<p>Quantità Rimasta: @Model.Quantita</p>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Aggiungi" />
+}

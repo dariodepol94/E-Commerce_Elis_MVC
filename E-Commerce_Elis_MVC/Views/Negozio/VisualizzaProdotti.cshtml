@@ -1,0 +1,27 @@
+﻿@model List<Prodotto>
+@{
+    ViewData["Title"] = "VisualizzaProdotti";
+}
+
+<h1>Elenco dei prodotti disponibili</h1>
+<hr />
+
+<table class="table-bordered">
+    <tr>
+        <th>Codice prodotto</th>
+        <th>Nome</th>
+        <th>Prezzo</th>
+        <th>Quantità disponibile</th>
+        <th></th>
+    </tr>
+    @foreach (var prodotto in Model)
+    {
+        <tr>
+            <td>@prodotto.IdProdotto</td>
+            <td>@prodotto.NomeProdotto</td>
+            <td>@prodotto.Prezzo</td>
+            <td>@prodotto.Quantita</td>
+            
+        </tr>
+    }
+</table>
